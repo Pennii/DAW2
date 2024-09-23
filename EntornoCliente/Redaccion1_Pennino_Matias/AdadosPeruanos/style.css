@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+}
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+
+}
+section{
+    text-align: center;
+    background-color: bisque;
+    height: 870px;
+}
+select{
+    margin-top: 50px;
+}
+#container{
+    display: flex;
+}
+.contenedor{
+    margin: 50px 0;
+    display: block;
+    width: 25%;
+    height: 600px;
+    transition: .5s;
+}
+img{
+    height: 100%;
+    width: 90%;
+}
+.contenedor:hover{
+    width: 115%;
+}
