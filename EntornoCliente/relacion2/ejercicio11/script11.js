@@ -4,7 +4,7 @@ var resultado;
 
 while (nota < 0 || nota > 10 || isNaN(nota)) {
     alert("Error al ingresar la nota");
-    var nota = prompt("Ingrese la nota del alumno");
+    nota = prompt("Ingrese la nota del alumno");
 }
 
 if(nota < 5){
