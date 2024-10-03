@@ -1,10 +1,10 @@
 var nom = prompt("Ingrese el nombre del alumno");
-var nota = prompt("Ingrese la nota del alumno");
+var nota = parseFloat(prompt("Ingrese la nota del alumno"));
 var resultado;
 
 while (nota < 0 || nota > 10 || isNaN(nota)) {
     alert("Error al ingresar la nota");
-    nota = prompt("Ingrese la nota del alumno");
+    nota = parseFloat(prompt("Ingrese la nota del alumno"));
 }
 
 if(nota < 5){

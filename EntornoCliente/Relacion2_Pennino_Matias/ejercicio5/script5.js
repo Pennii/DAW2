@@ -1,4 +1,8 @@
 var mes = parseInt(prompt("Ingresa el mes del año con valor numerico"));
+while(isNaN(mes) || mes < 1 || mes > 12){
+    alert("Ingresa un valor numerico entre el 1 y el 12")
+    mes = parseInt(prompt("Ingresa el mes del año"))
+}
 
 switch(mes){
     case 1:
