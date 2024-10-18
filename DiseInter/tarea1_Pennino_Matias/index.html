@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table id="compras">
+        <caption>Lista de compras</caption>
+        <thead>
+            <tr id="cabecera">
+                <th>producto</th>
+                <th>cantidad</th>
+                <th>precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="producto">
+                <td>carne</td>
+                <td class="cantidad">2kg</td>
+                <td class="precio">15</td>
+            </tr>
+            <tr class="producto">
+                <td>pollo</td>
+                <td class="cantidad">1kg</td>
+                <td class="precio">8</td>
+            </tr>
+            <tr class="producto">
+                <td>fideos</td>
+                <td class="cantidad">2 paquetes</td>
+                <td class="precio">2</td>
+            </tr>
+            <tr id="total">
+                <td colspan="2">total</td>
+                <td id="preciotot"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var precios = document.getElementsByClassName("precio")
+        var preciotot = document.getElementById("preciotot")
+        var cant = document.getElementsByClassName("cantidad")
+        var suma = 0
+        for (let i = 0; i < precios.length; i++) {
+            suma = suma + (parseFloat(precios[i].innerText) * parseInt(cant[i].innerText));
+        }
+        preciotot.innerText = suma
+    </script>
+</body>
+
+</html>

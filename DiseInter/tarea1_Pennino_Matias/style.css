@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+}
+
+#compras {
+    width: 60%;
+}
+
+#compras,
+td,
+th {
+    border: 1px solid white;
+    font-weight: 600;
+    font-size: x-large;
+    text-align: center;
+    border-collapse: collapse;
+}
+tr:nth-child(odd){
+    background: rgb(160, 18, 96);
+}
+#cabecera{
+    background: rgb(10, 173, 194);
+}
+tr:nth-child(even){
+    background: rgb(109, 63, 182);
+}
+
+th {
+    color: pink;
+}
+
+.producto {
+    color: orange;
+}
+
+#total {
+    color: red;
+}
