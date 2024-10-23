@@ -3,52 +3,49 @@
 Ejemplo Apertura y Cierre de Ventanas.
 -->
 <html>
-    <head>
-        <title>Apertura y Cierre de Ventanas</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script> 
-            var nuevaVentana = window;
-            var ventanaCreada;
- 
-            function  inicializar()
-            {
-                document.getElementById("crear-ventana").onclick=crearNueva;
-                document.getElementById("cerrar-ventana").onclick=cerrarNueva;
-                ventanaCreada=false;
-            }
- 
-            function  crearNueva()
-            {
-                if  (ventanaCreada==false)
-                {         
-                    nuevaVentana  =  window.open("https://www.iesaguadulce.es/centro/index.php/","","height=400,width=800");
-                    ventanaCreada=true;
-                }
-                else
-                    alert("Ventana ya creada!!!");
-            }
- 
-            function  cerrarNueva()
-            {
-                if  (ventanaCreada==true)
-                {
-                    nuevaVentana.close();
-                    ventanaCreada=false;
-                }
-                else
-                    alert("Ventana aun no creada!!!");
-            }
 
-            function verificar(){
-                if (nuevaVentana.closed) {
-                    alert("La ventana ha sido cerrada")
-                }else{
-                    alert("La ventana esta abierta")
-                }
-            }
+<head>
+    <title>Apertura y Cierre de Ventanas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var nuevaVentana = window;
+        var ventanaCreada;
 
-            function dimensiones(){
+        function inicializar() {
+            document.getElementById("crear-ventana").onclick = crearNueva;
+            document.getElementById("cerrar-ventana").onclick = cerrarNueva;
+            ventanaCreada = false;
+        }
+
+        function crearNueva() {
+            if (ventanaCreada == false) {
+                nuevaVentana = window.open("https://www.iesaguadulce.es/centro/index.php/", "", "height=600,width=800");
+                ventanaCreada = true;
+            }
+            else
+                alert("Ventana ya creada!!!");
+        }
+
+        function cerrarNueva() {
+            if (ventanaCreada == true) {
+                nuevaVentana.close();
+                ventanaCreada = false;
+            }
+            else
+                alert("Ventana aun no creada!!!");
+        }
+
+        function verificar() {
+            if (nuevaVentana.closed) {
+                alert("La ventana ha sido cerrada")
+            } else {
+                alert("La ventana esta abierta")
+            }
+        }
+
+        function dimensiones() {
+            if (!ventanaCreada) {
                 var ancho = parseInt(prompt("ancho: "))
                 var alto = parseInt(prompt("alto: "))
 
@@ -59,16 +56,22 @@ Ejemplo Apertura y Cierre de Ventanas.
                 }
 
                 if (ancho != 0 && alto != 0) {
-                    nuevaVentana.resizeTo(ancho, alto)
+                    nuevaVentana.resizeTo(ancho, alto);
                 }
+            }else{
+                alert("no se puede modificar una ventana que no existe")
             }
-        </script>
-    </head>
-    <body onLoad="inicializar()">
-        <div>Apertura y Cierre de Ventanas</div>
-        <button type="button" id="crear-ventana">Crear una sola Ventana nueva</button>
-        <button type="button" id="cerrar-ventana">Cerrar Nueva Ventana</button>     
-        <button type="button" id="verificar-ventana" onclick=verificar()>Verificar Nueva Ventana</button>     
-        <button type="button" id="redimensionar-ventana" onclick=dimensiones()>Modificar Nueva Ventana</button>     
-    </body>
+
+        }
+    </script>
+</head>
+
+<body onLoad="inicializar()">
+    <div>Apertura y Cierre de Ventanas</div>
+    <button type="button" id="crear-ventana">Crear una sola Ventana nueva</button>
+    <button type="button" id="cerrar-ventana">Cerrar Nueva Ventana</button>
+    <button type="button" id="verificar-ventana" onclick=verificar()>Verificar Nueva Ventana</button>
+    <button type="button" id="redimensionar-ventana" onclick=dimensiones()>Modificar Nueva Ventana</button>
+</body>
+
 </html>
