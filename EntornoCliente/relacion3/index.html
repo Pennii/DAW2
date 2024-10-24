@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +8,28 @@
         body{
             display: flex;
             justify-content: center;
+            
+        }
+        #ej{
+            margin-top: 20%;
         }
         iframe{
-            margin-top: 20%;
+            border: 10px solid black;
         }
     </style>
     <script>
-        function redirigir(){
-            document.getElementById("ej").innerHTML = "<iframe src=\"\" frameborder=\"0\" id=\"ej\"></iframe>"
+        function redirigir(fuente){
+            document.getElementById("ej").innerHTML = `<iframe src=\"${fuente}\" frameborder=\"0\"></iframe>`
         }
     </script>
 </head>
 <body>
     <div>
-        <button onclick=adivinatorio()>ejercicio1</button>
+        <button onclick='redirigir("ejercicio1.html")'>ejercicio1</button>
+        <button onclick='redirigir("ejercicio2.html")'>ejercicio2</button>
     </div>
-    <iframe src="" frameborder="0" id="ej"></iframe>
+    <div id="ej">
+        <iframe></iframe>
+    </div>
 </body>
 </html>

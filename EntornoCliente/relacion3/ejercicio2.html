@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function buscar() {
+            var texto = String(document.getElementById("cadena").value.trim())
+            var caracter = document.getElementById("caracter").value.trim()
+            var invalido = false
+            if (texto.length == 0) {
+                document.body.innerHTML += "<br>Error al ingresar cadena de texto"
+                invalido = true
+            }
+            if (caracter.length != 1) {
+                document.body.innerHTML += "<br>Error al ingresar caracter"
+                invalido = true
+            }
+            if (!invalido) {
+                texto = texto.replaceAll(caracter, "");
+                document.body.innerHTML += `<br>${texto}`
+            }
+        }
+        function invertir() {
+            var texto = String(document.getElementById("cadena").value.trim())
+            var multiplo = parseInt(document.getElementById("multiplo").value.trim())
+            var minus = new RegExp("[a-z]")
+            var inverso = ""
+            var invalido = false
+
+            if (texto.length == 0) {
+                document.body.innerHTML += "<br>Error al ingresar cadena de texto"
+                invalido = true
+            }
+
+            if (isNaN(multiplo) || multiplo > texto.length) {
+                document.body.innerHTML += "<br>Error al ingresar posicion"
+                invalido = true
+            }
+            if (!invalido) {
+                for (let i = 0; i < texto.length; i++) {
+                    if ((i + 1) % multiplo == 0) {
+                        if (minus.test(texto[i])) {
+                            inverso += texto[i].toUpperCase()
+
+                        } else {
+                            inverso += texto[i].toLowerCase()
+                        }
+                    } else {
+                        inverso += texto[i]
+                    }
+
+                }
+                document.body.innerHTML += `<br>${inverso}`
+            }
+        }
+        function recargar() {
+            location.reload();
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="cadena" placeholder="Ingresa una cadena">
+    <br>
+    <input type="text" id="caracter" placeholder="ingresa un caracter">
+    <br>
+    <input type="text" id="multiplo" placeholder="ingresa una posicion">
+    <br>
+    <button onclick=buscar()>eliminar</button>
+    <button onclick=invertir()>invertir</button>
+    <button onclick=recargar()>reestablecer</button>
+</body>
+
+</html>

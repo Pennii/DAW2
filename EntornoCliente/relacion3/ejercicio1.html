@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function adivinar() {
+            var pregunta = document.getElementById("pregunta").value.trim()
+            var respuesta
+            if (pregunta.toLowerCase().includes("dwec")) {
+                respuesta = "NO VOY A RESPONDER"
+            } else {
+                if (Math.random() >= 0.5) {
+                    respuesta = "SI"
+                } else {
+                    respuesta = "NO"
+                }
+            }
+            document.body.innerHTML += `<br>${respuesta}`
+        } 
+        function recargar(){
+            location.reload();
+        }
+    </script>
 </head>
+
 <body>
-    <h1>hola mundo</h1>
+    <input type="text" id="pregunta" placeholder="REALIZA TU PREGUNTA">
+    <button onclick=adivinar()>Preguntar</button>
+    <button onclick=recargar()>Reestablecer</button>
 </body>
+
 </html>
