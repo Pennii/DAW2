@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        iframe{
+            margin-top: 20%;
+        }
+    </style>
+    <script>
+        function redirigir(){
+            document.getElementById("ej").innerHTML = "<iframe src=\"\" frameborder=\"0\" id=\"ej\"></iframe>"
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick=adivinatorio()>ejercicio1</button>
+    </div>
+    <iframe src="" frameborder="0" id="ej"></iframe>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+Ejemplo Apertura y Cierre de Ventanas.
+-->
+<html>
+    <head>
+        <title>Apertura y Cierre de Ventanas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script> 
+            var nuevaVentana = window;
+            var ventanaCreada;
+ 
+            function  inicializar()
+            {
+                document.getElementById("crear-ventana").onclick=crearNueva;
+                document.getElementById("cerrar-ventana").onclick=cerrarNueva;
+                ventanaCreada=false;
+            }
+ 
+            function  crearNueva()
+            {
+                if  (ventanaCreada==false)
+                {         
+                    nuevaVentana  =  window.open("https://www.wikipedia.org/","","height=400,width=600");
+                    ventanaCreada=true;
+                }
+                else
+                    alert("Ventana ya creada!!!");
+            }
+ 
+            function  cerrarNueva()
+            {
+                if  (ventanaCreada==true)
+                {
+                    if (confirm("¿quieres cerrar la ventana?")) {
+                        nuevaVentana.close();
+                        ventanaCreada=false;    
+                    }
+                }
+                else
+                    alert("Ventana aun no creada!!!");
+            }
+
+            function informacion(){
+                var ancho = window.innerWidth
+                var alto = window.innerHeight
+                var nombre = window.document.title
+                var direccion = window.location
+                var navegador = window.navigator.userAgent
+
+                window.alert(`ancho: ${ancho}px, alto: ${alto}px, nombre: ${nombre}, url: ${direccion}, navegador: ${navegador}`)
+            }
+
+            function cambiar_nombre(){
+                var cambio =  prompt("Ingresa el nombre de la nueva ventana")
+                if (cambio != "") {
+                window.document.title = cambio
+                }
+            }
+
+            function redirigir(){
+                nuevaVentana.location.href = "https://www.google.es"
+            }
+
+            function foco(){
+                if (window.document.hasFocus()) {
+                    alert("la ventana tiene foco")
+                }else{
+                    alert("la ventana no tiene foco")
+                }
+            }
+        </script>
+    </head>
+    <body onLoad="inicializar()">
+        <div>Apertura y Cierre de Ventanas</div>
+        <button type="button" id="crear-ventana">Abrir nueva ventana</button>
+        <button type="button" id="cerrar-ventana">Cerrar la nueva Ventana</button>     
+        <button type="button" id="redimensionar-ventana" onclick=informacion()>Mostrar informacion de la ventana</button>     
+        <button type="button" id="redimensionar-ventana" onclick=cambiar_nombre()>Cambiar nombre/titulo de la ventana</button>     
+        <button type="button" id="redimensionar-ventana" onclick=foco()>Tiene foco</button>     
+        <button type="button" id="redimensionar-ventana" onclick=redirigir()>Redirigir a google</button>     
+    </body>
+</html>
