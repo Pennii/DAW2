@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function completa(){
+            var contenedor = document.getElementById("info")
+            var salida
+            var info = navigator.userAgent
+            if (info.includes("mobile")) {
+                salida = "esta en version movil"
+            }else{
+                salida = "esta en version de escritorio"
+            }
+            alert(salida)
+        }
+    </script>
+</head>
+<body>
+    <button onclick=completa()>Informacion del navegador</button>
+    <div id="info">
+
+    </div>
+</body>
+</html>

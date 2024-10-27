@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function diferencia() {
+            var dia = document.getElementById("dia").value
+            var mes = document.getElementById("mes").value
+            var anio = document.getElementById("anio").value
+            var fecha = new Date(anio, mes, dia)
+            var hoy = new Date()
+            var dias, semanas, anios
+            var rango = dia <= 31 && dia >= 1 && mes <= 11 && mes >= 0
+            var invalido = isNaN(dia) || isNaN(mes) || isNaN(anio) || rango == false
+
+            if (!invalido) {
+                hoy.setHours(0)
+                hoy.setMinutes(0)
+                hoy.setSeconds(0)
+                hoy.setMilliseconds(0)
+
+                fecha = fecha.getTime()
+                hoy = hoy.getTime()
+                if (fecha > hoy) {
+                    dias = parseInt((fecha - hoy) / (24 * 60 * 60 * 1000))
+                    semanas = parseInt(dias / 7)
+                    anios = parseInt(dias / 365)
+                } else {
+                    dias = parseInt((hoy - fecha) / (24 * 60 * 60 * 1000))
+                    semanas = parseInt(dias / 7)
+                    anios = parseInt(dias / 365)
+                }
+
+                alert(`${dias} dias, ${semanas} semanas, ${anios} años`)
+            }else{
+                alert("error al ingresar datos")
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <label for="">Ingresa el dia</label>
+    <input type="text" id="dia">
+    <label for="">Ingresa el mes</label>
+    <input type="text" id="mes">
+    <label for="">Ingresa el año</label>
+    <input type="text" id="anio">
+    <button onclick=diferencia()>diferencia de fecha</button>
+</body>
+
+</html>
