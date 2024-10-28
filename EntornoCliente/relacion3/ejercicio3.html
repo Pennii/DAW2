@@ -9,12 +9,14 @@
             var contenedor = document.getElementById("info")
             var salida
             var info = navigator.userAgent
+            var ancho = screen.width == window.innerWidth
             if (info.includes("mobile")) {
                 salida = "esta en version movil"
             }else{
                 salida = "esta en version de escritorio"
             }
-            alert(salida)
+            ancho = ancho ? "la ventana esta a pantalla completa":"la ventana no esta en pantalla completa"
+            contenedor.innerHTML = `<p>${ancho}, y ${salida}`
         }
     </script>
 </head>

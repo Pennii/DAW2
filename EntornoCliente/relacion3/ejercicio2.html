@@ -42,14 +42,14 @@
             if (!invalido) {
                 for (let i = 0; i < texto.length; i++) {
                     if ((i + 1) % multiplo == 0) {
-                        if (minus.test(texto[i])) {
-                            inverso += texto[i].toUpperCase()
+                        if (minus.test(texto.charAt(i))) {
+                            inverso += texto.charAt(i).toUpperCase()
 
                         } else {
-                            inverso += texto[i].toLowerCase()
+                            inverso += texto.charAt(i).toLowerCase()
                         }
                     } else {
-                        inverso += texto[i]
+                        inverso += texto.charAt(i)
                     }
 
                 }

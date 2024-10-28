@@ -1,0 +1,47 @@
+html {
+    margin-left: 0;
+}
+
+.page-template-page-brand-landing .brand-interactive {
+    opacity: 1;
+}
+
+.site-header {
+    width: 100vw;
+}
+
+.card-listing .card {
+    box-shadow: none;
+}
+
+.card-listing .card[style*="opacity: 1;"] {
+    box-shadow: 0 2px 8px rgb(12 12 13 / 10%);
+}
+
+.page-template-page-brand-landing {
+    overflow: hidden;
+}
+
+.page-template-page-brand-landing.brand-loaded {
+    overflow: auto;
+}
+
+.page-template-page-brand-landing .section-nav-menu-links {
+    /* opacity: 0; */
+    /* pointer-events: none; */
+    transition: .4s ease-in-out;
+}
+
+.page-template-page-brand-landing .section-nav-menu-links._disable,
+.page-template-page-brand-landing.brand-loaded .section-nav-menu-links._disable {
+    pointer-events: none;
+}
+
+.page-template-page-brand-landing.brand-loaded .section-nav-menu-links {
+    opacity: 1;
+    pointer-events: all;
+}
+
+body.in-transition.home {
+    overflow: auto;
+}
