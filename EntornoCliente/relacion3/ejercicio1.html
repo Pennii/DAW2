@@ -9,8 +9,10 @@
         function adivinar() {
             var pregunta = document.getElementById("pregunta").value.trim()
             var respuesta
+            var boton = document.getElementById("boton")
             if (pregunta.toLowerCase().includes("dwec")) {
                 respuesta = "NO VOY A RESPONDER"
+                boton.style.display = "none"
             } else {
                 if (Math.random() >= 0.5) {
                     respuesta = "SI"
@@ -28,7 +30,7 @@
 
 <body>
     <input type="text" id="pregunta" placeholder="REALIZA TU PREGUNTA">
-    <button onclick=adivinar()>Preguntar</button>
+    <button onclick=adivinar() id="boton">Preguntar</button>
     <button onclick=recargar()>Reestablecer</button>
 </body>
 

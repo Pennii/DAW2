@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcular() {
+            var radioEsf = parseFloat(document.getElementById("esfera").value)
+            var radioBase = parseFloat(document.getElementById("base").value)
+            var altura = parseFloat(document.getElementById("altura").value)
+            var salida, area, volumen
+            if ((isNaN(radioBase) && isNaN(radioEsf)) || isNaN(altura)) {
+                salida = "No se puede calcular el area y volumen con los datos dados"
+            } else {
+                if (!isNaN(altura)) {
+                    if (!isNaN(radioBase)) {
+                        area = Math.PI * (Math.pow(radioBase, 2)+Math.pow(altura,2))
+                        volumen = ((Math.PI*altura)/6)*(3*Math.pow(radioBase,2)+Math.pow(altura,2))
+                    }else{
+                        area = 2*Math.PI*radioEsf*altura
+                        volumen = ((Math.PI*Math.pow(altura,2))/3)*(3*radioEsf-altura)
+                    }
+                }
+                salida = `El area del casquete es: ${area} y el volumen: ${volumen}`
+            }
+            alert(salida)
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="radio de la base" id="base">
+    <input type="text" placeholder="radio de la esfera" id="esfera">
+    <input type="text" placeholder="altura del casquete" id="altura">
+    <button onclick="calcular()">Calcular area y volumen del casquete esferico</button>
+</body>
+
+</html>
