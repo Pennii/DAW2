@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ejercicio 1</h2>
+    <script>
+        var frutas = ["Plátano", "Naranja", "Manzana", "Melocotón"];
+        document.write(frutas.reverse());          // Imprimirá:  Melocotón,Manzana,Naranja,Plátano 
+   </script> 
+   <br>
+   <h2>Ejercicio 2</h2>
+   <script>
+    var frutas = ["Plátano", "Naranja", "Manzana", "Melocotón"];
+    document.write(frutas .slice(0,1) + "<br />");     // imprimirá: Plátano
+    document.write(frutas .slice(1) + "<br />");          // imprimirá: Naranja,Manzana,Melocotón
+    document.write(frutas .slice(-2) + "<br />");          // imprimirá: Manzana, Melocotón
+    document.write(frutas + "<br />");               // imprimirá: Plátano,Naranja,Manzana,Melocotón 
+ </script>
+ <br>
+ <h2>El ejercicio 3 se mostrara por consola</h2>
+ <script>
+    var miPila=["elemento 1","elemento 2"];
+    var valor1=prompt("Dime un dato");
+    var valor2=prompt("Dime otro dato");
+    miPila.push(valor1);
+    miPila.push(valor2);
+    console.log("La pila después de añadir"+miPila);
+    // Ahora se elimina el elemento que está en la posición final
+    var cabecera=miPila.pop();
+   console.log("Se saca la cabecera "+cabecera); // Se puede ver que se guarda la cabecera y ya se puede hacer algo con ese dato. 
+   console.log("La pila después de eliminar"+miPila);
+ </script>
+</body>
+</html>
