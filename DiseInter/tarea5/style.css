@@ -24,11 +24,15 @@ select {
 svg {
     margin: 0 5px;
 }
-#contenidos{
+
+#contenidos {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
+
 aside {
-    height: 910px;
+    height: 900px;
     width: 15%;
     border-right: 1px solid black;
 }
@@ -41,9 +45,43 @@ aside {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-li{
+
+ul {
     list-style: none;
 }
-#more{
+
+#more {
     color: grey;
+}
+
+main {
+    width: 40%;
+}
+
+#derecha {
+    width: 30%;
+}
+
+.contenedor{
+    margin-top: 40px;
+    width: 60%;
+}
+
+#cambios {
+    list-style: circle;
+}
+
+footer {
+    position: absolute;
+    bottom: 3%;
+    left: 30%;
+
+}
+
+.bordeado {
+    border: 1px solid black;
+}
+.bordeado div{
+    border-bottom: 1px solid black;
+    width: 100%;
 }
