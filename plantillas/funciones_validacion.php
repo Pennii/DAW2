@@ -30,11 +30,11 @@ function validar_numero($campo) {
     return $campo;
 }
 
-//validamos si el sexo es valido
-function validar_sexo($campo) {
+//validamos si el radio es valido
+function validar_radio($campo) {
     $salida = false;
-    //establecemos los sexos posibles
-    $sexos = ["hombre", "mujer"];
+    //establecemos los radios posibles
+    $sexos = [""];
     //validamos el texto
     $campo = validar_texto($campo);
     //si es valido devuelve el campo sino false
@@ -45,16 +45,16 @@ function validar_sexo($campo) {
     return $salida;
 }
 
-//validamos si las aficiones pasadas son validas
-function validar_aficion($campo) {
+//validamos si las checkbox pasadas son validas
+function validar_check($campo) {
     $invalido = false;
-    //establecemos las aficiones que son correctas
-    $aficiones = ["deportes", "musica", "alimentacion", "moda"];
-    foreach ($campo as $nombre => $aficion) {
+    //establecemos las checkbox que son correctas
+    $es = [""];
+    foreach ($campo as $nombre => $n) {
         //validamos el texto
-        $campo[$nombre] = validar_texto($aficion);
+        $campo[$nombre] = validar_texto($n);
         //si encontramos algo que no pertenezca al array el campo es invalido
-        if (!in_array($campo[$nombre], $aficiones)) {
+        if (!in_array($campo[$nombre], $es)) {
             $invalido = true;
         }
     }
@@ -67,13 +67,12 @@ function validar_aficion($campo) {
     return $salida;
 }
 
-function validar_provincia($campo) {
-    $invalido = false;
+function validar_select($campo) {
     //establecemos las aficiones que son correctas
-    $provincias = ["0", "almeria", "granada", "huelva", "sevilla", "malaga", "cadiz"];
+    $opciones = ["0"];
     //validamos el texto
     $campo = validar_texto($campo);
-    $valido = in_array($campo, $provincias);
+    $valido = in_array($campo, $opciones);
     //si el campo es valido se devuelve, sino se devuelve false
     if ($valido) {
         $salida = $campo;
