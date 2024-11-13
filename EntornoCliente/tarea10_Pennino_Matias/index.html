@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 10</title>
+    <script>
+        function redirigir(fuente){
+            document.getElementById("ej").innerHTML = `<iframe src=\"${fuente}\" frameborder=\"0\"></iframe>`
+        }
+    </script>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #botones{
+            margin-top: 50px;
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+        }
+        button{
+            width: 20%;
+            background-color: orange;
+            border: none;
+            font-size: larger;
+            transition: all 1s ease;
+            border-radius: 20px;
+            
+        }
+        button:hover{
+            width: 40%;
+            background-color: red;
+            color: white;
+        }
+        iframe{
+            border: 1px solid black;
+            margin-top: 100px;
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="botones">
+        <button onclick="redirigir('ejercicio1.html')">Ejercicio 1</button>
+        <button onclick="redirigir('ejercicio2.html')">Ejercicio 2</button>
+        <button onclick="redirigir('ejercicio3.html')">Ejercicio 3</button>
+    </div>
+    <div id="ej"><iframe src="" frameborder="0"></iframe></div>
+</body>
+</html>
