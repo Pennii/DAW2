@@ -1,0 +1,123 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+#perfil{
+    width: 20%;
+    height: 200px;
+    object-fit: cover;
+}
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    height: 50px;
+    opacity: 40%;
+    transition: 0.5s;
+}
+
+nav:hover{
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+a {
+    color: rgb(238, 206, 206);
+    text-decoration: none;
+    display: inline-block;
+    width: 10%;
+    font-weight: 800;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ejercicio2,
+#ejercicio3,
+#ejercicio4 {
+    margin-top: 50px;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+    background-color: orange;
+}
+
+tr:nth-child(even) {
+    background-color: red;
+}
+
+#ejercicio3 {
+    display: flex;
+    width: 40%;
+    height: 600px;
+    flex-wrap: wrap;
+}
+
+#ejercicio3 div {
+    width: 50%;
+    height: 50%;
+}
+
+#ejercicio3 div img {
+    width: 100%;
+    height: 100%;
+}
+
+#ejercicio4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#ejercicio4 div {
+    width: 40%;
+}
+
+figure {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#playa {
+    width: 60%;
+    padding: 2%;
+}
+#flitro-gris{
+    font-family: Arial;
+}
+#filtro-inv{
+    font-family: 'Times New Roman';
+}
+#ejercicio4:has(#gris:checked) #playa {
+    filter: grayscale(100%);
+}
+
+#ejercicio4:has(#invertido:checked) #playa {
+    filter: invert(100%);
+}
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}

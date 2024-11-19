@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Selectores CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>Bienvenidos a la Actividad 2</h1>
+    <div class="contenedor">
+        <p class="intro">Esta es una introducción a los selectores de CSS</p>
+        <p id="destacado">Este párrafo es un ejemplo</p>
+        <a href="#">Este es otro párrafo</a>
+        <ul class="lista">
+            <li>Elemento 1</li>
+            <li class="elemento">Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+        <input type="text" placeholder="Escribe aquí...">
+        <input type="email" placeholder="Correo electrónico">
+    </div>
+
+    <h1>Segundo apartado</h1>
+    <ol>
+        <li>Significa que un elemento es hijo directo de otro, por ejemplo en este mismo codigo el elemento de lista es
+            hijo directo de la lista ordenada, todo lo que se haga en el css se vera en el elemento li si se escribe ol
+            > li <img src="img/hijo directo.png" alt=""></li>
+        <li>Significa que se seleccionan elementos que se encuentran al mismo nivel, que son hermanos. Por ejemplo el h1
+            y el div "contenedor" del primer apartado, las modificaciones del css se veran en el h1 si se escribe
+            .contenedor + h1 <img src="img/hermano.png" alt=""></li>
+    </ol>
+</body>
+
+</html>

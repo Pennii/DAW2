@@ -1,0 +1,25 @@
+p{
+    background-color: rgb(173, 169, 169);
+}
+.intro{
+    color: blue;
+    font-style: italic;
+}
+#destacado{
+    background-color: yellow;
+}
+
+.lista li{
+    color: green;
+}
+
+.lista > li{
+    border-bottom: 1px solid black;
+}
+
+input[type="email"]{
+    background-color: lightblue;
+}
+ol li{
+    list-style: upper-alpha;
+}
