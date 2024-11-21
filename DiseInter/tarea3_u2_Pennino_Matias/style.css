@@ -3,6 +3,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 200px;
+    font-family: 'Times New Roman';
 }
 #perfil{
     width: 20%;
@@ -84,6 +85,7 @@ tr:nth-child(even) {
     justify-content: center;
     align-items: center;
     width: 100%;
+    font-family: "Comic neue";
 }
 
 #ejercicio4 div {
@@ -102,12 +104,7 @@ figure {
     width: 60%;
     padding: 2%;
 }
-#flitro-gris{
-    font-family: Arial;
-}
-#filtro-inv{
-    font-family: 'Times New Roman';
-}
+
 #ejercicio4:has(#gris:checked) #playa {
     filter: grayscale(100%);
 }
@@ -120,4 +117,5 @@ footer{
     color: white;
     display: flex;
     justify-content: center;
+    font-family: Arial;
 }

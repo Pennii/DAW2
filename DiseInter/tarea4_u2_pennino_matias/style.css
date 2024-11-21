@@ -1,0 +1,32 @@
+body {
+    display: grid;
+    grid-template-columns:
+        "enc enc enc enc"
+        "bot bot bot bot"
+        "lat sup sup der"
+        "lat inf inf der"
+        "fin fin fin fin"
+    ;
+}
+
+#enc{
+    grid-area: "enc";
+}
+#bot{
+    grid-area: "bot";
+}
+#lat{
+    grid-area: "lat";
+}
+#sup{
+    grid-area: "sup";
+}
+#inf{
+    grid-area: "inf";
+}
+#der{
+    grid-area: "der";
+}
+#fin{
+    grid-area: "fin";
+}
