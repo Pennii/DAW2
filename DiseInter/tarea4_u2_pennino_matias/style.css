@@ -1,32 +1,86 @@
-body {
+:root {
+    --cabecera: red;
+    --botones: blue;
+    --lateral: green;
+    --superior: yellow;
+    --inferior: brown;
+    --derecha: black;
+    --final: pink;
+    --contenido: white;
+    --sombra: red;
+}
+
+#contenedor {
     display: grid;
-    grid-template-columns:
+    grid-template-areas:
         "enc enc enc enc"
         "bot bot bot bot"
         "lat sup sup der"
         "lat inf inf der"
         "fin fin fin fin"
     ;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 950px;
+    gap: 10px;
 }
 
-#enc{
-    grid-area: "enc";
+#enc,
+#bot,
+#lat,
+#sup,
+#inf,
+#der,
+#fin,
+aside {
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px var(--sombra);
 }
-#bot{
-    grid-area: "bot";
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#lat{
-    grid-area: "lat";
+
+section aside {
+    background-color: var(--contenido);
+    width: 50%;
+    height: 50%;
 }
-#sup{
-    grid-area: "sup";
+
+#enc {
+    grid-area: enc;
+    background-color: var(--cabecera);
 }
-#inf{
-    grid-area: "inf";
+
+#bot {
+    grid-area: bot;
+    background-color: var(--botones);
 }
-#der{
-    grid-area: "der";
+
+#lat {
+    grid-area: lat;
+    background-color: var(--lateral);
 }
-#fin{
-    grid-area: "fin";
+
+#sup {
+    grid-area: sup;
+    background-color: var(--superior);
+}
+
+#inf {
+    grid-area: inf;
+    background-color: var(--inferior);
+}
+
+#der {
+    grid-area: der;
+    background-color: var(--derecha);
+}
+
+#fin {
+    grid-area: fin;
+    background-color: var(--final);
 }
