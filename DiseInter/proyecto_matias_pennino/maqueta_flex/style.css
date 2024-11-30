@@ -1,0 +1,58 @@
+:root {
+    --colorTitulos: #166DB5;
+    --colorPrincipal: #4694D5;
+    --colorLetras: #F5F5DC;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    color: var(--colorLetras);
+    display: flex;
+    gap: .5%;
+    flex-direction: column;
+}
+
+header,
+main,
+nav,
+footer,
+main div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header,
+footer {
+    background-color: var(--colorTitulos);
+
+}
+
+nav,
+main {
+    background-color: var(--colorPrincipal);
+}
+
+nav {
+
+}
+
+main {
+
+}
+
+main div {
+
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+
+}
+
+#titulo {
+    text-shadow: 4px 4px 1px black, 5px 5px 1px red;
+}
