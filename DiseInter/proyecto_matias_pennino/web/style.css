@@ -2,6 +2,8 @@
     --colorTitulos: #166DB5;
     --colorPrincipal: #4694D5;
     --colorLetras: #F5F5DC;
+    --colorResaltado: #D4AF37;
+    --colorSombreado: #C20404;
 }
 
 html {
@@ -15,9 +17,12 @@ body {
     gap: .5%;
     flex-direction: column;
 }
-header, footer{
+
+header,
+footer {
     font-family: "Bree Serif", serif;
 }
+
 header,
 main,
 nav,
@@ -47,26 +52,57 @@ main {
 
 header {
     display: flex;
-    height: 15%;
-    justify-content: space-around;
+    height: 20%;
+    width: 100%;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 70%;
+}
+
+#titulo {
+    text-shadow: 4px 4px 1px rgb(0, 0, 0), 5px 5px 1px var(--colorSombreado);
+}
+
+#logo,
+#imagenDestacada {
+    width: 60%;
+    height: 100%;
+}
+
+#subHead4 a {
+    transition: .5s;
+}
+
+#subHead4 a:hover {
+    color: var(--colorResaltado);
+    transition: .5s;
 }
 
 nav {
     height: 5%;
 }
 
+#subNav1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorLetras);
+}
+
 main {
     height: 70%;
     flex-direction: column;
-    
-}
-
-footer {
-    display: flex;
-    height: 10%;
-    align-items: center;
-    justify-content: space-around;
 
 }
 
@@ -76,9 +112,24 @@ main div {
 
 }
 
-#titulo {
-    text-shadow: 4px 4px 1px black, 5px 5px 1px red;
+main, nav{
+    font-family: Arial;
 }
-ul{
+footer {
+    display: flex;
+    height: 10%;
+    align-items: center;
+    justify-content: space-around;
+
+}
+#subFoo1{
+    color: var(--colorResaltado);
+}
+
+ul {
     list-style: none;
+}
+
+img {
+    border-radius: 20px;
 }
