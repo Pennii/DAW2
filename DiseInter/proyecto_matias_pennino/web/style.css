@@ -4,6 +4,8 @@
     --colorLetras: #F5F5DC;
     --colorResaltado: #D4AF37;
     --colorSombreado: #C20404;
+    --fondoPar: #464dd5;
+    --fondoImpar: #8746d5;
 }
 
 html {
@@ -136,7 +138,7 @@ main div {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--colorResaltado);
+    background-color: var(--fondoImpar);
     border-radius: 10px;
 }
 
@@ -158,12 +160,41 @@ table{
     margin-right: 10px;
 }
 
-#empresas {
-   
+tr:nth-of-type(even){
+    background-color: var(--fondoPar);
+}
+tr:nth-of-type(odd){
+    background-color: var(--fondoImpar);
 }
 
-#destacado {
-    
+#empresas {
+   display: flex;
+   justify-content: space-evenly;
+}
+#empresas div{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: var(--fondoPar);
+    border-radius: 10px;
+}
+#empresas div img{
+    width: 70%;
+    height: 90%;
+}
+
+#destacado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#destacado img{
+    width: 20%;
+    height: 40%;
 }
 
 main,
