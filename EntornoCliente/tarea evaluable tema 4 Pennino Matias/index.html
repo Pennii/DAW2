@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        #frame{
+            height: 600px;
+            width: 600px;
+            border: 1px solid black;
+        }
+        iframe{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="frame('1.html')">Ejercicio 1</button>
+        <button onclick="frame('2.html')">Ejercicio 2</button>
+        <button onclick="frame('3.html')">Ejercicio 3</button>
+        <button onclick="frame('4.html')">Ejercicio 4</button>
+        <button onclick="frame('5.html')">Ejercicio 5</button>
+    </div>
+    <div id="frame">
+        <iframe src="" frameborder="0"></iframe>
+    </div>
+    <script>
+        let contenedor = document.getElementById("frame");
+        function frame(ejercicio){
+            contenedor.innerHTML = `<iframe src='${ejercicio}' frameborder='0'></iframe>`
+        }
+    </script>
+</body>
+</html>

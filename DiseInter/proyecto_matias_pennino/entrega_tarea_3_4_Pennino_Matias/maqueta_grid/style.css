@@ -1,0 +1,64 @@
+:root {
+    --colorTitulos: #166DB5;
+    --colorPrincipal: #4694D5;
+    --colorLetras: #F5F5DC;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    color: var(--colorLetras);
+    display: grid;
+    grid-template-rows: 10% 10% 60% 17%;
+    grid-template-columns: 100%;
+    gap: .5%;
+}
+
+header,
+main,
+nav,
+footer,
+main div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+header,
+footer {
+    background-color: var(--colorTitulos);
+    grid-template-areas: "sub1 sub2 sub3";
+    grid-template-rows: 100%;
+
+}
+
+nav,
+main {
+    background-color: var(--colorPrincipal);
+}
+
+nav {
+    grid-template-areas: "sub";
+    grid-template-rows: 100%;
+}
+
+main {
+    grid-template-areas: "sub1"
+        "sub2";
+    grid-template-rows: 50% 50%;
+}
+
+main div {
+
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+
+}
+
+#titulo {
+    text-shadow: 4px 4px 1px black, 5px 5px 1px red;
+}
