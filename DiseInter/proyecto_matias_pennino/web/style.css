@@ -176,14 +176,14 @@ tr:nth-of-type(odd){
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
-    background-color: var(--fondoPar);
+    background-color: var(--fondoImpar);
     border-radius: 10px;
 }
 #empresas div img{
-    width: 70%;
-    height: 90%;
+    width: 50%;
+    height: 40%;
 }
 
 #destacado{
