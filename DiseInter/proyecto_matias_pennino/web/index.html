@@ -43,13 +43,13 @@
                 <div><img src="../img/pc.png" alt="">
                     <p class="descProducto">Pc armada y lista para jugar</p>
                 </div>
-                <div><img src="../img/silla gamer.png" alt="">
-                    <p class="descProducto">Silla gamer muy comoda para jugar</p>
+                <div><img src="../img/silla.png" alt="">
+                    <p class="descProducto">Silla muy comoda para trabajar</p>
                 </div>
                 <div><img src="../img/cargador.png" alt="">
                     <p class="descProducto">Cargador de carga rapida</p>
                 </div>
-                <div><img src="../img/pasta termica.png" alt="">
+                <div id="pasta"><img src="../img/pasta_termica.png" alt="">
                     <p class="descProducto">Pasta termica</p>
                 </div>
             </div>
@@ -83,90 +83,115 @@
                 </table>
             </div>
             <div id="destacado" class="contenedor" onmouseenter="enfoque('destacado')" onmouseleave="desenfoque()">
-                <h2 class="descProducto">Placa de vide Nvidia RTX 4090</h2>
+                <h2 class="descProducto">Placa de video Nvidia RTX 4090</h2>
                 <img src="../img/producto_destacado.jpg" alt="">
-                <p class="descProducto">Placa de video de nueva generacion, capas de resistir cualquier cantidad de trabajo</p>
+                <p class="descProducto">Placa de video de nueva generacion, capaz de resistir cualquier cantidad de
+                    trabajo</p>
                 <br>
                 <p class="descProducto"><strong>Precio de salida: </strong>€1200</p>
             </div>
             <div id="empresas" class="contenedor" onmouseenter="enfoque('empresas')" onmouseleave="desenfoque()">
                 <div><img src="../img/empresa1.png" alt="">
                     <h2 class="descProducto">WeTech</h2>
+                    <p class="descProducto">Recibió servicio de diseño de web</p>
                     <ul class="descProducto">
-                        <li>a</li>
-                        <li>a</li>
+                        <li>"Trabajo muy eficiente y profesional"</li>
+                        <li>"Lograron captar mis ideas a la perfeccion"</li>
                     </ul>
                 </div>
                 <div><img src="../img/empresa2.png" alt="">
                     <h2 class="descProducto">MeTech</h2>
+                    <p class="descProducto">Compró 10 sillas</p>
                     <ul class="descProducto">
-                        <li>s</li>
-                        <li>d</li>
+                        <li>"Producto de la mejor calidad"</li>
+                        <li>"El armado de las sillas fue muy sencillo"</li>
                     </ul>
                 </div>
                 <div><img src="../img/empresa3.png" alt="">
                     <h2 class="descProducto">TeTech</h2>
+                    <p class="descProducto">Compró una caja de pastas termicas</p>
                     <ul class="descProducto">
-                        <li>a</li>
-                        <li>a</li>
+                        <li>"Mejoró el rendimiento de los equipos"</li>
+                        <li>"El producto llega en buenas condiciones"</li>
                     </ul>
                 </div>
                 <div><img src="../img/empresa4.png" alt="">
                     <h2 class="descProducto">OeTech</h2>
+                    <p class="descProducto">Recibió servicio de limpiea de pc</p>
                     <ul class="descProducto">
-                        <li>a</li>
-                        <li>a</li>
+                        <li>"Todas las pc quedaron impecables"</li>
+                        <li>"Ya no se escucha la turbina de un avion al encender la pc"</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div id="subMain2">subzona 2</div>
+        <div id="subMain2">
+            <h2>La diversidad que impulsa el éxito: discapacidad e inclusión en las empresas</h2>
+            <div>
+                <div id="columna">
+                    <p>En el marco del Día Internacional de las Personas con Discapacidad, celebrado cada 3 de
+                        diciembre,
+                        recordamos el compromiso de la Agenda 2030 con la inclusión, resumido en su lema: “No dejar a
+                        nadie
+                        atrás”.</p>
+                    <p> Para las empresas, incorporar personas con discapacidad no solo es un acto de justicia social,
+                        sino
+                        también una oportunidad estratégica.</p>
+                </div>
+                <img src="../img/ods.png" alt="">
+                <img id="segunda" src="../img/ruedas.png" alt="">
+            </div>
+        </div>
     </main>
     <footer>
         <div id="subFoo1">
+            <p>Cookies</p>
+            <div><input type="checkbox" id="obl"><label for="obl">Obligatorias</label></div>
+            <div><input type="checkbox" id="fun"><label for="fun">Funcionalidades</label><br></div>
+            <div><input type="checkbox" id="pub"><label for="pub">Publicitarias</label></div>
+        </div>
+        <div id="subFoo2">
             <ul>
-                <li>Diseño de interfaces web</li>
-                <li>2º DAW</li>
+                <li>Soporte</li>
+                <li>Politica de privacidad</li>
+                <li>Acerca de</li>
             </ul>
         </div>
-        <div id="subFoo2">subzona 2</div>
         <div id="subFoo3">
-            <p>Matias Pennino</p>
+            <img src="../img/x.png" alt="">
+            <img src="../img/facebook.png" alt="">
+            <img src="../img/instagram.png" alt="">
         </div>
     </footer>
+    <script>
+        var descripcionesProducto = document.getElementsByClassName("descProducto")
+        var contenedores = document.getElementsByClassName('contenedor');
+        function enfoque(valor) {
+    
+            for (var i = 0; i < contenedores.length; i++) {
+    
+                contenedores[i].style.display = "none";
+    
+            }
+    
+            // document.getElementById(valor).style.transition = '.5s';
+            document.getElementById(valor).style.display = 'flex';
+            document.getElementById(valor).style.width = '100%';
+            document.getElementById(valor).style.height = '100%';
+            for (let i = 0; i < descripcionesProducto.length; i++) {
+                descripcionesProducto[i].style.display = "block"
+            }
+    
+        }
+        function desenfoque() {
+            for (var i = 0; i < contenedores.length; i++) {
+                contenedores[i].style = '';
+            }
+            for (let i = 0; i < descripcionesProducto.length; i++) {
+                descripcionesProducto[i].style = ""
+            }
+    
+        }
+    </script>
 </body>
-
-<script>
-    var descripcionesProducto = document.getElementsByClassName("descProducto")
-    var contenedores = document.getElementsByClassName('contenedor');
-    function enfoque(valor) {
-
-        for (var i = 0; i < contenedores.length; i++) {
-
-            contenedores[i].style.display = "none";
-
-        }
-
-        // document.getElementById(valor).style.transition = '.5s';
-        document.getElementById(valor).style.display = 'flex';
-        document.getElementById(valor).style.width = '100%';
-        document.getElementById(valor).style.height = '100%';
-        for (let i = 0; i < descripcionesProducto.length; i++) {
-            descripcionesProducto[i].style.display = "block"
-        }
-
-    }
-    function desenfoque() {
-        for (var i = 0; i < contenedores.length; i++) {
-            contenedores[i].style.display = 'flex';
-            contenedores[i].style.width = "50%";
-            contenedores[i].style.height = "50%";
-        }
-        for (let i = 0; i < descripcionesProducto.length; i++) {
-            descripcionesProducto[i].style.display = "none"
-        }
-
-    }
-</script>
-
 </html>
