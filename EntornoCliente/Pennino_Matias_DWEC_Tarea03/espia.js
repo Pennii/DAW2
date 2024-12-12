@@ -1,7 +1,9 @@
-import Ciudadano from "/ciudadano.js";
+import Ciudadano from "./ciudadano.js";
 
-
-export default class Espia extends Ciudadano {
+/**
+ * @extends Ciudadano
+ */
+class Espia extends Ciudadano {
     #_tipo
     static #_tipos = ['desestabilizador', 'diplomatico', 'infiltrado', 'legal', 'operativo', 'provocador', 'durmiente']
     constructor(nombre, pais, edad, tipo) {
@@ -10,7 +12,6 @@ export default class Espia extends Ciudadano {
         }
         if (edad < 16) {
             throw new Error("Edad invalida");
-            
         }
         if (!Espia.tipos.includes(tipo)) {
             throw new Error("Tipo invalido")
@@ -27,7 +28,7 @@ export default class Espia extends Ciudadano {
         }
         this.#_tipo=nuevo
     }
-
+    
     static get tipos(){
         return Espia.#_tipos
     }
@@ -36,3 +37,4 @@ export default class Espia extends Ciudadano {
         return super.toString()+` y es un agente ${this.tipo}`
     }
 }
+export default Espia

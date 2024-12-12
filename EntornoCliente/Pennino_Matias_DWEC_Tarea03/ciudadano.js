@@ -2,7 +2,7 @@ class Ciudadano {
     #_nombre
     #_pais
     #_edad
-    static #_paises = ["USA", "URSS", "REINO UNIDO", "RDA", "RFA", "FRANCIA", "SUIZA"]
+    static _paises = ["USA", "URSS", "REINO UNIDO", "RDA", "RFA", "FRANCIA", "SUIZA"]
     constructor(nombre, pais, edad) {
         if (typeof (nombre) != "string" || nombre.length < 5) {
             throw new Error("Nombre invalido")
@@ -51,7 +51,7 @@ class Ciudadano {
     }
 
     static get paises(){
-        return Ciudadano.#_paises
+        return Ciudadano._paises
     }
 
     toString() {

@@ -29,7 +29,7 @@ try {
     contenedor.innerHTML += `<p>Error: ${error}</p>`
 }
 try {
-    var espia1 = new Espia('Julian', 'RFA', 56, 'legal')
+    var espia1 = new Espia('Julian', 'ESPAÑA', 56, 'legal')
 } catch (error) {
     contenedor.innerHTML += `<p>Error: ${error}</p>`
 }
@@ -102,3 +102,6 @@ for (const espia of agencia1.agentes) {
     }
 }
 contenedor.innerHTML+=agencia1.listadoAgentes("legal")
+contenedor.innerHTML += espia2.toString()
+espia2.edad = 34
+contenedor.innerHTML += espia2.toString()
