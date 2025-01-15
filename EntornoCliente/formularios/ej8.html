@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trabajando con This</h1>
+    <form action="ej8.html" id="formulario">
+        <label for="">Nombre</label>
+        <input type="text" name="nombre" onclick="identificar(this)">
+        <label for="">Apellido</label>
+        <input type="text" name="apellido" onclick="identificar(this)">
+        <label for="">Edad</label>
+        <input type="password" name="edad" value="22" onclick="identificar(this)">
+        <label for="">Pais</label>
+        <input type="radio" name="pais" value="españa" checked onclick="identificar(this)"> <label for="" >España</label>
+        <input type="radio" name="pais" value="francia" onclick="identificar(this)"> <label for="" >Francia</label>
+        <input type="button" value="Identificar">
+    </form>
+    <div id="informacion"></div>
+    <script>
+        let formulario = document.getElementById("formulario")
+        let informacion = document.getElementById("informacion")
+        formulario.addEventListener("copy", () => {
+            informacion.innerHTML = "<h2>no me copies</h2>"
+        })
+        formulario.addEventListener("change", () => {
+            let datos = new FormData(formulario)
+            informacion.innerHTML = `<h2>${datos.get("nombre")} ${datos.get("apellido")} es de ${datos.get("pais")} y tiene ${datos.get("edad")}</h2>`
+        })
+
+        function identificar(objeto){
+            let nombre = objeto.name
+            let id = objeto.id
+            let valor = objeto.value
+            let tipo = objeto.type
+            informacion.innerHTML += `<br><h2>nombre: ${nombre}, id: ${id}, valor: ${valor}, tipo: ${tipo}</h2>`
+        }
+    </script>
+</body>
+</html>

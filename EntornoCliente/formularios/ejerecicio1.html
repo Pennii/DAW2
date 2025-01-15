@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <h1>Ejercicio: Acceso a formularios</h1>
+    <form action="ejerecicio1.html" id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="nombre">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        //getElementById
+        let formulario = document.getElementById("formulario");
+        console.log(formulario);
+        //getElementsByTagName
+        let formularios = document.getElementsByTagName("form");
+        console.log(formularios[0]);
+    </script>
+</body>
+
+</html>

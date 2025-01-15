@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trabajando con objeto select</h1>
+    <form action="ej7.html" id="formulario">
+        <label for="">Seleccione una provincia</label>
+        <select name="provincia" id="provincia">
+            <option value="LU">Lugo</option>
+            <option value="LC">La Coruña</option>
+            <option value="OU">Ourense</option>
+            <option value="PO">Pontevedra</option>
+        </select>
+        <button>Consultar informacion de la opcion</button>
+    </form>
+    <div id="informacion"></div>
+    <script>
+        let formulario = document.getElementById("formulario");
+        let provincia = document.getElementById("provincia");
+        let informacion = document.getElementById("informacion");
+
+        formulario.addEventListener("submit", (req) => {
+            req.preventDefault();
+            let provinciaValor = provincia.value;
+            let provinciaTexto = provincia.options[provincia.selectedIndex].text;
+            informacion.innerHTML = `<h2>La provincia elegida es Texto: ${provinciaTexto}, Valor: ${provinciaValor}</h2>`;
+        });
+        provincia.addEventListener("change", () => {
+            let provinciaValor = provincia.value;
+            let provinciaTexto = provincia.options[provincia.selectedIndex].text;
+            informacion.innerHTML = `<h2>La provincia elegida es Texto: ${provinciaTexto}, Valor: ${provinciaValor}</h2>`;
+        })
+    </script>
+</body>
+</html>

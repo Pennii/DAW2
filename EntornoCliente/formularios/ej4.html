@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="ej4.html" id="formulario">
+        <label for="">Nombre y apellidos</label>
+        <input type="text" id="campo">
+    </form>
+    <p>Activar un efecto <strong>Blur</strong> cuando se pierda el foco del campo</p>
+    <script>
+        let campo = document.getElementById("campo")
+        campo.addEventListener("focusout",() => {
+            campo.value = campo.value.toUpperCase()
+        })
+        campo.addEventListener("focusin", () => {
+            campo.value = campo.value.toLowerCase()
+        })
+    </script>
+</body>
+</html>

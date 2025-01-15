@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej6</title>
+</head>
+
+<body>
+    <form action="ej6.html" id="formulario">
+        <fieldset>
+            <legend>Selecciona tu actor favorito</legend>
+            <input type="radio" name="actor" value="Willis">
+            <label for="">Willis</label>
+            <input type="radio" name="actor" value="Carrey">
+            <label for="">Carrey</label>
+            <input type="radio" name="actor" value="Tosar">
+            <label for="">Tosar</label>
+            <button>Consultar datos</button>
+        </fieldset>
+    </form>
+    <div id="datos"></div>
+    <script>
+        const formulario = document.getElementById("formulario");
+        const datosActor = document.getElementById("datos");
+
+        formulario.addEventListener("submit", (req) => {
+            req.preventDefault();
+            let datos = new FormData(formulario); 
+            let actor = datos.get("actor");
+
+            switch (actor) {
+                case "Willis":
+                    datosActor.innerHTML = "<p>Bruce willis, 19/03/1955</p>";
+                    break;
+                case "Carrey":
+                    datosActor.innerHTML = "<p>Jim Carrey, 17/01/1962</p>";
+                    break;
+                case "Tosar":
+                    datosActor.innerHTML = "<p>Luis Tosar, 13/10/1971</p>";
+                    break;
+            }
+        });
+    </script>
+</body>
+
+</html>

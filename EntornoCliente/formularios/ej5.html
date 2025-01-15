@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <form action="ej5.html">
+        <input type="checkbox" name="verano" id="verano" class="opcion">
+        <label for="">te gusta el verano?</label>
+        <input type="checkbox" name="invierno" id="invierno" class="opcion">
+        <label for="">te gusta el verano?</label>
+        <button>Enviar</button>
+        <br>
+        <button id="marcar">Marcar todos los checkbox</button>
+        <button id="desmarcar">Desmarcar todos los checkbox</button>
+    </form>
+    <p id="cambiar">Soy alex, no me pulses</p>
+    <script>
+        const marcar = document.getElementById("marcar");
+        const desmarcar = document.getElementById("desmarcar");
+        const opciones = document.getElementsByClassName("opcion");
+        const cambiar = document.getElementById("cambiar");
+        const textoOriginal = cambiar.innerText;
+
+        marcar.addEventListener("click", (evento) => {
+            evento.preventDefault();
+            for (let i = 0; i < opciones.length; i++) {
+                opciones[i].checked = true;
+            }
+        });
+
+        desmarcar.addEventListener("click", (evento) => {
+            evento.preventDefault();
+            for (let i = 0; i < opciones.length; i++) {
+                opciones[i].checked = false;
+            }
+        });
+
+        cambiar.addEventListener("mouseover", () => {
+            cambiar.innerText = "hola"
+        });
+        cambiar.addEventListener("mouseout", () => {
+            cambiar.innerText = textoOriginal;
+        });
+    </script>
+</body>
+
+</html>

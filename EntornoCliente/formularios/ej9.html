@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="ej9.html" id="enlace" onclick="alertar(this)">Pulsa aqui</a>
+    <a href="ej9.html" id="enlacedos">click aqui</a>
+    <a href="ej9.html" id="enlacetres">click aqui</a>
+    <a href="ej9.html" id="enlacecuatro">click aqui</a>
+    <script>
+        function alertar(objeto){
+            alert(`Te conectaremos a la pagina (v1): ${objeto.href}`)
+        }
+        function alertarDos(){
+            alert(`Te conectaremos a la pagina (v2): ${this.href}`)
+        }
+        document.getElementById("enlacedos").onclick = alertarDos
+        document.getElementById("enlacetres").onclick = function () {
+            alert(`Te conectaremos a la pagina (v3): ${this.href}`)
+        }
+        document.getElementById("enlacecuatro").onclick = () => {
+            alert(`Te conectaremos a la pagina (v4): ${this.href}`)
+        }
+    </script>
+</body>
+</html>

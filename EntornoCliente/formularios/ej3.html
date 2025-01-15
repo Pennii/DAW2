@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Combinar <strong>name</strong> e <strong>id</strong> con DOM 2</p>
+    <form action="ej3.html" id="formulario" name="formularioEntrada">
+        <input type="text" placeholder="valor de entrada:" id="valor" name="entrada">
+        <button id="buscar" name="busqueda">buscar</button>
+    </form>
+    <script>
+            let valor = document.getElementById("valor") //busqueda por id
+            let entrada = document.formularioEntrada.entrada //busqueda por names
+            let valorListado = document.formularioEntrada.elements //busqueda por elementos
+            let valorFormularios = document.forms["formulario"].entrada //listado por formulario
+            let entradaDirecta = entrada //busqueda por name
+            console.log(valor)
+            console.log(entrada)
+            console.log(valorListado)
+            console.log(valorFormularios)
+            console.log(entradaDirecta)
+ 
+    </script>
+</body>
+</html>

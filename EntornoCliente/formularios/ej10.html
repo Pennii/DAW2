@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="ej10.html">
+        <a href="" id="enlace">Click aqui</a>
+        <input type="button" value="Añadir evento" id="add">
+        <input type="button" value="Eliminar evento" id="eli">
+    </form>
+    <script>
+        const add = document.getElementById("add")
+        const eli = document.getElementById("eli")
+        const enlace = document.getElementById("enlace")
+
+        add.addEventListener("click", () =>{
+            enlace.addEventListener("mouseover", alertar)
+        })
+
+        eli.addEventListener("click", () => {
+            enlace.removeEventListener("mouseover", alertar)
+        })
+
+        function alertar(){
+            alert(`Conectando con la pagina v1: ${enlace.href}`)
+        }
+    </script>
+</body>
+</html>
