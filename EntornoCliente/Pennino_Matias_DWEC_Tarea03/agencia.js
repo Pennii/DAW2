@@ -74,11 +74,11 @@ class Agencia {
         let salida = ''
         for (const espia of this.agentes) {
             if (espia.tipo === tipo) {
-                salida+=`<p>-${espia.toString()}</p>`
+                salida+=`-${espia.toString()} `
             }
         }
         if (salida === '') {
-            salida = `<p>No hay espias de tipo ${tipo} en esta agencia</p>`
+            salida = `No hay espias de tipo ${tipo} en esta agencia`
         }
         return salida
     }
@@ -103,13 +103,15 @@ class Agencia {
     }
 
     #_formateaInfo(){
-        let salida = '<table><tr>'
+        let lista = this.agentes
+        lista.sort((a,b)=>a.pais.localeCompare(b.pais))
+        let salida = '<table border="1"><tr>'
             salida += `<th>Nombre</th>`
             salida += `<th>edad</th>`
             salida += `<th>pais</th>`
             salida += `<th>tipo</th>`
             salida += "</tr>"
-        for (const espia of this.agentes) {
+        for (const espia of lista) {
             salida += "<tr>"
             salida += `<td>${espia.nombre}</td>`
             salida += `<td>${espia.edad}</td>`

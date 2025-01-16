@@ -95,13 +95,18 @@ agencia1.reclutarAgente(espia3)
 agencia2.reclutarAgente(espia3)
 agencia2.reclutarAgente(espia4)
 agencia2.reclutarAgente(espia5)
+agencia1.reclutarAgente(espia9)
+agencia1.reclutarAgente(espia10)
 
 for (const espia of agencia1.agentes) {
     if (buscarTopo(agencia1, agencia2, espia)) {
-        contenedor.innerHTML += `La ${agencia1.nombreAgencia} tiene un topo: ${espia.nombre}`
+        contenedor.innerHTML += `La ${agencia1.nombreAgencia} tiene un topo: ${espia.nombre}<br>`
     }
 }
-contenedor.innerHTML+=agencia1.listadoAgentes("legal")
-contenedor.innerHTML += espia2.toString()
+contenedor.innerHTML+=agencia1.listadoAgentes("legal")+'<br>'
+contenedor.innerHTML += espia2.toString() + '<br>'
 espia2.edad = 34
 contenedor.innerHTML += espia2.toString()
+contenedor.innerHTML+= agencia1
+contenedor.innerHTML+= agencia1.listadoOrdenado('edad')+'<br>'
+contenedor.innerHTML+= agencia1.listadoOrdenado('nombre')
