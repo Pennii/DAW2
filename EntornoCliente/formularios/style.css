@@ -1,0 +1,20 @@
+form{
+    background-color: rgb(25, 238, 25);
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
+}
+label{
+    width: 40%;
+}
+input, select{
+    width: 40%;
+}
+button{
+    width: 40%;
+}
+#salida{
+    color: red;
+}

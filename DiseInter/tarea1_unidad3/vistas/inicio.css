@@ -1,0 +1,35 @@
+main{
+    display: grid;
+    grid-template-areas: "bueno malo"
+    "premio premio"
+    "form form";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#semana{
+    grid-area: bueno;
+}
+#malo{
+    grid-area: malo;
+}
+#postre{
+    grid-area: premio;
+}
+#comentarios{
+    grid-area: form;
+}
+#formulario{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#formulario label{
+    width: 50%;
+}
+button{
+    width: 45%;
+}

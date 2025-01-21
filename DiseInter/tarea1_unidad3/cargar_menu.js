@@ -1,7 +1,6 @@
-document.body.innerHTML += "<p>hola</p>";
-/*document.body.innerHTML += ` <header>
+document.body.innerHTML += ` <header>
         <a href='inicio.html'>
-            <img src='img/logo.png' alt=''>
+            <img src='../img/logo.png' alt=''>
         </a>
     </header>
     <aside>
@@ -22,8 +21,8 @@ document.body.innerHTML += "<p>hola</p>";
                             minino es inteligente?</a></li>
                 </ul>
             </li>
-            <li><a href='vistas/adopta.html'>Adopta un gato</a></li>
-            <li><a href='vistas/hogares.html'>Busca un hogar para tu gato</a></li>
+            <li><a href='adopta.html'>Adopta un gato</a></li>
+            <li><a href='hogares.html'>Busca un hogar para tu gato</a></li>
         </ul>
     </aside>
     <main></main>
@@ -37,4 +36,4 @@ document.body.innerHTML += "<p>hola</p>";
             </iframe>
         </div>
 
-    </footer>`*/
+    </footer>`
