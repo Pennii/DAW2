@@ -3,21 +3,21 @@ document.body.innerHTML += ` <header>
             <img src='../img/logo.png' alt=''>
         </a>
     </header>
-    <aside>
+    <aside id='menuLateral'>
         <ul>
             <li>
                 Noticias
             </li>
-            <li id='noticias'>
-                <ul>
+            <li class='noticias'>
+                <ul class='noticias'>
                     <li><a
-                            href='https://www.msn.com/es-es/mascotas-y-animales/mascotas/soy-veterinaria-y-estos-alimentos-naturales-pueden-ayudar-a-tu-perro-o-gato-con-sus-problemas-digestivos/ar-AA1xrMoA?ocid=BingNewsVerp'>El
+                            href='noticias.html?noticia=1'>El
                             mejor alimento para tu mascota</a></li>
                     <li><a
-                            href='https://www.elperiodico.com/es/vida-y-estilo/20250120/10-actividades-gatos-adoran-mascotas-dv-113523081'>Actividades
+                            href='noticias.html?noticia=2'>Actividades
                             para tu gato</a></li>
                     <li><a
-                            href='https://www.infobae.com/mascotas/2025/01/18/la-memoria-y-comprension-del-lenguaje-en-los-gatos-revela-su-nivel-de-inteligencia/'>¿Tu
+                            href='noticias.html?noticia=3'>¿Tu
                             minino es inteligente?</a></li>
                 </ul>
             </li>

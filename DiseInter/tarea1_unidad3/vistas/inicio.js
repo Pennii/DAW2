@@ -4,10 +4,11 @@ const caracteresConocer = document.getElementById("caracteresConocer")
 const caracteresComentario = document.getElementById("caracteresComentario")
 const enviar = document.getElementById("enviar")
 const formulario = document.getElementById("formulario")
+const cancelar = document.getElementById("cancelar")
 
 const caracteresMax = 60
 let comentarioValido = false
-let conocerValido  = false
+let conocerValido = false
 
 conocer.addEventListener("keyup", () => {
     let actual = conocer.value.length
@@ -34,10 +35,18 @@ formulario.addEventListener("submit", (envio) => {
     }
 })
 
+cancelar.addEventListener("click", () => {
+    comentarioValido = false
+    conocerValido = false
+    caracteresConocer.innerText = `0/${caracteresMax} caracteres`
+    caracteresComentario.innerText = `0/${caracteresMax} caracteres`
+    verificarAreas()
+})
+
 function verificarAreas() {
     if (comentarioValido && conocerValido) {
         enviar.style.display = ""
-    }else{
+    } else {
         enviar.style.display = "none"
     }
 }

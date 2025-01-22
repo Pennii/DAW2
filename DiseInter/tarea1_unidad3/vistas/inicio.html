@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,27 @@
     <link rel="stylesheet" href="../layout.css">
     <link rel="stylesheet" href="inicio.css">
 </head>
+
 <body>
     <script src="../cargar_menu.js"></script>
     <main>
-        <section id="semana">
+        <section id="bueno">
             <h3>El gato de la semana</h3>
-            <img src="" alt="">
+            <img src="../img/gato_bueno.jpg" alt="">
         </section>
         <section id="malo">
             <h3>El gato malo de la semana</h3>
-            <img src="" alt="">
+            <img src="../img/gato_malo.jpg" alt="">
         </section>
         <section id="postre">
             <h3>El premio que los gatos adoran</h3>
-            <img src="" alt="">
+            <img src="../img/postre.png" alt="">
         </section>
         <section id="comentarios">
             <h3>Dejanos sugerencias</h3>
             <form id="formulario" action="">
                 <label for="">Edad</label>
-                <input type="number">
+                <input type="number" id="edad">
                 <label for="">¿Como conociste la empresa?</label>
                 <textarea id="conocer"></textarea>
                 <p id="caracteresConocer"></p>
@@ -34,10 +36,11 @@
                 <textarea name="comentario" id="comentario"></textarea>
                 <p id="caracteresComentario"></p>
                 <button id="enviar">Enviar</button>
-                <button type="reset">Cancelar</button>
+                <button type="reset" id="cancelar">Cancelar</button>
             </form>
         </section>
     </main>
     <script src="inicio.js"></script>
 </body>
+
 </html>
