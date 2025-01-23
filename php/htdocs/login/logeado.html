@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+        table{
+            border-collapse: collapse;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bienvenido <span id="nombreUsu"></span></h1>
+    <a href="./index.html" onclick="cerrarSesion()">Cerrar sesión</a>
+
+    <div id="habitaciones"></div>
+    <script>
+        //Devuelve el valor de una cookie
+        function getCookie(cookie) {
+            let aux;
+            let salida = false;
+            let encontrado = false;
+            let nombre = cookie + "=";
+            let cookieDecodificada = decodeURIComponent(document.cookie);
+            let listaCookies = cookieDecodificada.split(';');
+            for (let i = 0; i < listaCookies.length && !encontrado; i++) {
+                aux = listaCookies[i].trim();
+                if (aux.indexOf(nombre) == 0) {
+                    salida = aux.substring(nombre.length, aux.length);
+                    encontrado = true;
+                }
+            }
+            return salida;
+        }
+        function eliminarCookie(cookie) {
+            document.cookie = `${cookie}=; expires=thu, 01 Jan 1970 00:00:00 UTC;`;
+        }
+
+        function cerrarSesion() {
+            eliminarCookie('nombre');
+        }
+        window.addEventListener('pageshow', () => {
+            if (!getCookie('nombre')) {
+                document.body.style.display = 'none';
+                window.location.href = './index.html';
+            }
+        })
+        document.addEventListener("DOMContentLoaded",()=>{
+            cargarHabitaciones();
+        })
+        let usuario = getCookie("nombre");
+        let boton = document.getElementById("mostrar")
+        let habitaciones = document.getElementById("habitaciones")
+        let salida
+        document.getElementById('nombreUsu').innerText = usuario;
+
+        function cargarHabitaciones() {
+            fetch(`./bd.php`, {
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+                .then((response) => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert('No hay mas habitaciones')
+                    } else {
+                        let habs = data.habitaciones;
+                        let columnas = Object.keys(habs[0])
+                        salida = '<table><tr>';
+                        columnas.forEach(columna => {
+                            salida += `<th>${columna}</th>`;
+                        });
+                        salida += '</tr>';
+                        habs.forEach(habitacion => {
+                            salida += '<tr>';
+                            Object.values(habitacion).forEach(campo => {
+                                salida += `<td>${campo}</td>`;
+                            });
+                            salida += '</tr>';
+                        });
+                        salida += '</table>';
+                        habitaciones.innerHTML = salida;
+                    }
+                })
+        }
+    </script>
+</body>
+
+</html>
