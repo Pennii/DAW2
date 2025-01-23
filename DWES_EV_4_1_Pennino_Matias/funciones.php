@@ -78,13 +78,14 @@ function cargarEspectaculo($datos) {
         $insertarEspectaculo->bindParam(":espec", $espectaculo);
         $insertarEspectaculo->bindParam(":nom", $nombre);
         $insertarEspectaculo->bindParam(":tipo", $tipo);
-        $insertarEspectaculo->bindParam(":gru", $gru);
-        $insertarEspectaculo->execute();
+        $insertarEspectaculo->bindParam(":gru", $grupo);
+        $espectaculoCargado = $insertarEspectaculo->execute();
         $conexion->commit();
     } catch (Exception $exc) {
         $conexion->rollBack();
-        echo $exc->getTraceAsString();
+       $espectaculoCargado = $exc->getMessage();
     }
+    return $espectaculoCargado;
 }
 
 function obtenerEspectaculos(){

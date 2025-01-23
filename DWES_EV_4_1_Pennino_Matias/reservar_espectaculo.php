@@ -34,5 +34,6 @@ $espectaculos = obtenerEspectaculos();
                 <?php }
                 ?>
         </table>
+          <a href="cerrar_sesion.php">Cerrar Sesion</a>
     </body>
 </html>

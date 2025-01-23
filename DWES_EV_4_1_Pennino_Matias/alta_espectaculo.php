@@ -31,5 +31,6 @@ if (!isset($_SESSION["usuario"]) || $_SESSION["rol"] != "administrador") {
             <br>
             <button name="cargarEspectaculo">Cargar espectaculo</button>
         </form>
+        <a href="cerrar_sesion.php">Cerrar Sesion</a>
     </body>
 </html>

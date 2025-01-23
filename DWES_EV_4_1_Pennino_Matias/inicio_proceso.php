@@ -29,7 +29,7 @@ if (filter_has_var(INPUT_POST, "iniciarSesion")) {
         header("Location: index.php?mensaje=$mensaje");
     }
 }else{
-    header("Location: indeex.php");
+    header("Location: index.php");
 }
 
     

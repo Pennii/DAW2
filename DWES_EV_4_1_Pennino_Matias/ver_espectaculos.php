@@ -25,13 +25,14 @@ $espectaculos = obtenerEspectaculos();
             foreach ($espectaculos as $espectaculo) {
                 ?><tr>
                     <?php
-                        foreach ($espectaculo as $campo) {
-                            ?><td><?php echo $campo ?></td><?php
-                        }
+                    foreach ($espectaculo as $campo) {
+                        ?><td><?php echo $campo ?></td><?php
+                    }
                     ?>
                 </tr>
-                <?php }
-                ?>
+            <?php }
+            ?>
         </table>
+        <a href="cerrar_sesion.php">Cerrar Sesion</a>
     </body>
 </html>
