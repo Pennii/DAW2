@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        form{
+            width: 60%;
+        }
+        fieldset{
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        label, input, select, button{
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Solicitud de admision al congreso</legend>
+            <label>Nombre</label><input type="text" id="nombre">
+            <label>Contraseña</label><input type="password" id="clave">
+            <label>Nacionalidad</label>
+            <select id="nacionalidad">
+                <option value="0">Elija un pais</option>
+                <option value="argentino">Argentina</option>
+                <option value="italiano">Italia</option>
+                <option value="español">España</option>
+                <option value="uruguayo">Uruguay</option>
+                <option value="aleman">Alemania</option>
+            </select>
+            <button id="enviar">Enviar solicitud</button>
+            <button type="reset">Borrar datos</button>
+        </fieldset>
+        <div id="salida"></div>
+    </form>
+    <a href="index.html">Volver</a>
+    <script src="scripts/admision.js"></script>
+</body>
+</html>

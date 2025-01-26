@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        form {
+            width: 60%;
+        }
+
+        fieldset {
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #tipos{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+        }
+
+        label,
+        input[type=text],
+        select,
+        button {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Solicitud de admision al congreso</legend>
+            <label>Nombre del plan</label><input type="text" id="nombre">
+            <label>Codigo</label><input type="text" id="clave">
+            <label>Tipo de plan:</label>
+            <div id="tipos">
+                <label>Operaciones en campo</label>
+            </div>
+            <button id="enviar">Enviar solicitud</button>
+            <button type="reset">Borrar datos</button>
+        </fieldset>
+        <div id="salida"></div>
+    </form>
+    <a href="index.html">Volver</a>
+</body>
+
+</html>
