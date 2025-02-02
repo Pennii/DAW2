@@ -1,6 +1,6 @@
 document.body.innerHTML += ` <header>
         <a href='inicio.html'>
-            <img src='../img/logo.png' alt=''>
+            <img src='img/logo.png' alt=''>
         </a>
     </header>
     <aside id='menuLateral'>
