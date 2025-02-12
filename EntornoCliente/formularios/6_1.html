@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="apellido" name="apellido">
+    <script>
+        var entrada = document.getElementById("apellido")
+        for (const atributo of entrada.attributes) {
+            console.log(atributo)
+        }
+        entrada.name = "cambiado"
+        for (const atributo of entrada.attributes) {
+            console.log(atributo)
+        }
+    </script>
+</body>
+</html>

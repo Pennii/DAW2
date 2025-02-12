@@ -36,6 +36,7 @@ enviar.addEventListener("click", (evento) => {
     let listaErrores = []
     let claveValida = false
     evento.preventDefault()
+    //Se comprueba que el nombre del usuario incluya unicamente letras y tenga la longitud adecuada
     if (!new RegExp(/^[A-Za-zÑñ]{10,25}$/).test(nombre.value)) {
         listaErrores.push("El nombre no puede estar vacio. Solo se admiten entre 10 y 25 caracteres alfabeticos")
         colorNombre = nombre.style.backgroundColor = "red"
@@ -43,7 +44,8 @@ enviar.addEventListener("click", (evento) => {
         colorNombre = nombre.style.backgroundColor = "green"
     }
 
-    if (!new RegExp(/^[^ç$]\w{5,18}\d\.$/).test(clave.value) || !new RegExp(/\d{0,3}/).test(clave.value) || new RegExp(/(select)|(where)|;/).test(clave.value)) {
+    //Se comprueba que haya 3 numeros, no empiece por ç o $, no incluya select, where o ;, y cumpla el requisito de longitud y terminar con un numero y punto
+    if (!new RegExp(/(?=^\D*[0-9]\D*[0-9]?\D*[0-9]?\D+$)(?!^[çÇ$])(?!.*(select|where|;).*)(^.{6,19}\d\.$)/).test(clave.value.toLowerCase())) {
         listaErrores.push(`La contraseña no puede estar vacia. Solo se admiten entre 8 a 21 caracteres, debe tener hasta 3 numeros, no puede incluir 'select', 'where' o ';', 
             debe terminar en un numero y un punto (8. por ejemplo), y no puede iniciar con 'ç' o '$'`)
         colorClave = clave.style.backgroundColor = "red"
