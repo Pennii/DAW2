@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -52,7 +52,7 @@
             if (!new RegExp(/^[A-Za-z]+(\s[A-Za-z]+)*$/).test(apellido.value)) {
                 invalido = true;
             }
-            if (!new RegExp(/^[A-Za-z]+@[a-z]+\.[a-z]{2,3}$/).test(email.value)) {
+            if (!new RegExp(/^[A-Za-z0-9]+@[a-z]+\.[a-z]{2,3}$/).test(email.value)) {
                 invalido = true;
             }
             if (mensaje.value == null || mensaje.value.trim() == "") {
