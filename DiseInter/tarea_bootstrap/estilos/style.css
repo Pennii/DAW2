@@ -1,0 +1,19 @@
+nav{
+    background-color: rgba(227, 231, 11, 0.74);
+    width: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#carouselExampleCaptions{
+    width: 600px;
+}
+img{
+    width: 100%;
+}
+h5{
+  text-align: center;
+}

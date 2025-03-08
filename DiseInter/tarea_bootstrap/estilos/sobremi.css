@@ -1,0 +1,28 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+}
+.container-fluid{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    opacity: 30%;
+}
+#silenciar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    padding-left: 50px;
+}
+i{
+    font-size: 2rem;
+}
+.tarjetas{
+    width: 60%;
+}
