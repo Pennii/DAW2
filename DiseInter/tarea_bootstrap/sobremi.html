@@ -86,6 +86,7 @@
         const volumen = document.getElementById("silenciar")
         const musica = document.getElementById("musica")
         var sonando;
+        var empezo;
         const tarjetas = document.getElementsByClassName("card")
         for (const tarjeta of tarjetas) {
             tarjeta.addEventListener("mouseover", () => {
@@ -102,17 +103,24 @@
 
         window.addEventListener("load", () => {
             volumen.innerHTML = '<button style="background: none; border: none;"><i class="bi bi-volume-mute-fill"></i></button>';
-            sonando = true;
+            sonando = false;
+            empezo = false;
         })
         volumen.addEventListener("click", () => {
-            if (sonando) {
-                musica.volume = 0;
-                volumen.innerHTML = '<button style="background: none; border: none;"><i class="bi bi-volume-up-fill"></i></button>';
-                sonando = false;
-            } else {
+            if (!sonando) {
                 musica.volume = 1;
-                volumen.innerHTML = '<button style="background: none; border: none;"><i class="bi bi-volume-mute-fill"></i></button>';
+                volumen.innerHTML = '<button style="background: none; border: none;"><i class="bi bi-volume-up-fill"></i></button>';
                 sonando = true;
+
+                if (!empezo) {
+                    musica.play();
+                    empezo = true;
+                }
+                
+            } else {
+                musica.volume = 0;
+                volumen.innerHTML = '<button style="background: none; border: none;"><i class="bi bi-volume-mute-fill"></i></button>';
+                sonando = false;
             }
         })
     </script>
